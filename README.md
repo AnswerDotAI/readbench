@@ -9,9 +9,10 @@ A straightforward benchmark to measure how much performance degrades when using 
 #### Step-by-step
 
 1. **Install dependencies:**
-   ```bash
+
+```bash
   [uv] pip install -r requirements.txt
-   ```
+```
 
 2. **Set up API keys:**
 
