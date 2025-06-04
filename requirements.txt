@@ -1,0 +1,28 @@
+# Core dependencies for the evaluation pipeline
+typer
+tqdm
+pathlib-stubs
+
+# Data processing and ML
+datasets
+numpy
+pandas
+
+# Image processing
+Pillow
+
+# Model clients and APIs
+google-genai
+claudette
+cosette
+openai
+vertexauth
+anthropic
+
+# Text processing and metrics
+jieba
+fuzzywuzzy
+rouge
+
+# Utilities
+python-dotenv

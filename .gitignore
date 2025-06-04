@@ -1,0 +1,11 @@
+.env
+.venv
+.claude
+__pycache__/*
+readbench_results/
+readbench_meta/
+rendered_images*
+NoLima/
+analysis/
+discard/
+GPQA_DATA/
