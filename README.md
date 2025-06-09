@@ -23,7 +23,7 @@ If you're planning on using any API-based models, make sure you define your rele
 The images and text are stored on the HuggingFace hub, as a .zip. You may download it directly from there, using `huggingface-cli` (recommended):
 
 ```bash
-huggingface-cli download answerdotai/ReadBench readbench.zip --type dataset
+huggingface-cli download answerdotai/ReadBench readbench.zip --dataset-type dataset
 ```
 
 Alternatively, if you are unable to use `huggingface-cli`, you may use the direct download URL, as provided by HuggingFace:
