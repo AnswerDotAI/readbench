@@ -1,7 +1,6 @@
 # Core dependencies for the evaluation pipeline
 typer
 tqdm
-pathlib-stubs
 
 # Data processing and ML
 datasets
