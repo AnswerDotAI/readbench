@@ -23,7 +23,7 @@ If you're planning on using any API-based models, make sure you define your rele
 The images and text are stored on the HuggingFace hub, as a .zip. You may download it directly from there, using `huggingface-cli` (recommended):
 
 ```bash
-huggingface-cli download answerdotai/ReadBench readbench.zip --repo-type dataset
+huggingface-cli download answerdotai/ReadBench readbench.zip --repo-type dataset --local-dir .
 ```
 
 Alternatively, if you are unable to use `huggingface-cli`, you may use the direct download URL, as provided by HuggingFace:
@@ -42,15 +42,16 @@ unzip readbench.zip
 
 The authors of GPQA have requested that the dataset should not be reshared as-is, to minimise model contamination. We follow their wishes, which means you need to generate the GPQA images yourself, absed on the original GPQA dataset. You can do so by running the following commands:
 ```bash
-python data_prep.py --datasets gpqa
+python datagen.py --datasets gpqa
 ```
+You might get an error that the dataset is gated and that you need to accept terms on the HF hub. To resolve, just follow the link, accept, and try again.
 
 5. **Prepare the benchmark**
 
 You may now run the following command to prepare the metadata file which will be used to run the benchmark:
 
 ```bash
-python downsampler.py --root rendered_images_ft12 --split standard
+python data_prep.py --root rendered_images_ft12 --split standard
 ```
 
 #### tl;dr
@@ -58,10 +59,10 @@ python downsampler.py --root rendered_images_ft12 --split standard
 Running the commands below will download and prepare the full ReadBench benchmark, as used in the paper:
 
 ```bash
-huggingface-cli download answerdotai/ReadBench readbench.zip --type dataset
+huggingface-cli download answerdotai/ReadBench readbench.zip --repo-type dataset --local_dir .
 unzip readbench.zip
-python data_prep.py --datasets gpqa
-python downsampler.py --root rendered_images_ft12 --split standard
+python datagen.py --datasets gpqa
+python data_prep.py --root rendered_images_ft12 --split standard
 ```
 
 
